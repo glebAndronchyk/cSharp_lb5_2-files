@@ -1,13 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Text;
 using System.IO;
-using System.Linq;
-using System.Threading.Tasks;
 
 namespace LB5_2
 {
-    partial class Program
+    internal class Program
     {
         static List<Student> ReadData(string fileName)
         {
@@ -33,7 +30,7 @@ namespace LB5_2
             return students;
         }
 
-        static void runMenu(List<Student> studs)
+        static void RunMenu(List<Student> studs)
         {
             Console.WriteLine(studs[0].firstName);
         }
@@ -41,7 +38,7 @@ namespace LB5_2
         static void Main(string[] args)
         {
             List<Student> studs = ReadData("input.txt");
-            runMenu(studs);
+            RunMenu(studs);
         }
     }
 }

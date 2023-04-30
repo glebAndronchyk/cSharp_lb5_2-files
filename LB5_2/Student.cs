@@ -18,6 +18,7 @@ namespace LB5_2
         public Student(string lineWithAllData)
         {
             string[] studentData = Regex.Split(lineWithAllData, @"\s+");
+            
             if (studentData.Length > 9 || studentData.Length == 0)
             {
                 throw new Exception("Incorrect data format");

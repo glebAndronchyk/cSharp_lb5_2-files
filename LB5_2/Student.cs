@@ -34,5 +34,22 @@ namespace LB5_2
             informaticsMark = Checkers.CheckMark(studentData[7]);
             scholarship = Checkers.CheckScholarship(studentData[8]);
         }
+        public double PhysicsAverage()
+        {
+            int sum = 0;
+            int count = 0;
+
+            if (!Char.IsDigit(physicsMark)) return 0;
+
+            int mark = Convert.ToInt32(physicsMark.ToString());
+
+            if (mark >= 2 && mark <= 5)
+            {
+                sum += mark;
+                count++;
+            }
+
+            return count == 0 ? 0 : (double)sum / count;
+        }
     }
 }

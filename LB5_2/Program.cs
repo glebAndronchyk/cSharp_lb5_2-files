@@ -1,46 +1,17 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-using System.IO;
-using System.Linq;
-using System.Threading.Tasks;
+﻿using System.Collections.Generic;
 
 namespace LB5_2
 {
-    partial class Program
+    class Program
     {
-        static List<Student> ReadData(string fileName)
-        {
-            StreamReader sr = new StreamReader(fileName);
-            string studentInfo;
-            List<Student> students = new List<Student>();
-            
-            try
-            {
-                while (!sr.EndOfStream)
-                {
-                    studentInfo = sr.ReadLine();
-                    Student student = new Student(studentInfo);
-                    students.Add(student);
-                }
-            }
-            catch (IOException e)
-            {
-                Console.WriteLine($"Failed to read line {fileName}:\n" + e.Message);
-                throw;
-            }
-
-            return students;
-        }
-
         static void runMenu(List<Student> studs)
         {
-            Console.WriteLine(studs[0].firstName);
+            new Gleb().Task(studs);
         }
 
         static void Main(string[] args)
         {
-            List<Student> studs = ReadData("input.txt");
+            List<Student> studs = File.ReadStudentsData("input.txt");
             runMenu(studs);
         }
     }

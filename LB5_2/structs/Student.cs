@@ -33,5 +33,11 @@ namespace LB5_2
             informaticsMark = Checkers.CheckMark(studentData[7]);
             scholarship = Checkers.CheckScholarship(studentData[8]);
         }
+
+        public override string ToString()
+        {
+            return
+                $"{surName} {firstName} {patronymic} {sex} {dateOfBirth} {mathematicsMark} {physicsMark} {informaticsMark} {scholarship}";
+        }
     }
 }

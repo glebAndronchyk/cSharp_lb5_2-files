@@ -53,7 +53,7 @@ namespace LB5_2
             try
             {
                 int scholarship_ = int.Parse(scholarship);
-                if (scholarship_ >= 1234 && scholarship_ <= 4321 || scholarship_ == 0)
+                if (scholarship_ >= 1234 && scholarship_ <= 4321 || scholarship_ == 0 || scholarship_ == 6000)
                 {
                     return scholarship_;
                 }

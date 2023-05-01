@@ -39,7 +39,7 @@ namespace LB5_2
             int sum = 0;
             int count = 0;
 
-            if (!Char.IsDigit(physicsMark)) return 0;
+            if (physicsMark == '-') return 0;
 
             int mark = Convert.ToInt32(physicsMark.ToString());
 

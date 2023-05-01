@@ -30,9 +30,8 @@ namespace LB5_2
 
             return students;
         }
-        static void Main(string[] args)
+        static void RunMenu(List<Student> studs)
         {
-            List<Student> studs = ReadData("input.txt");
             int choice;
 
             do
@@ -62,6 +61,11 @@ namespace LB5_2
                         break;
                 }
             } while (choice != 0);
+        }
+        static void Main()
+        {
+            List<Student> studs = ReadData("input.txt");
+            RunMenu(studs);
         }
     }
 }

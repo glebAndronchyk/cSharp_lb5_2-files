@@ -1,15 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Text;
 using System.IO;
-using System.Linq;
-using System.Threading.Tasks;
+using System.Runtime.InteropServices;
 
 namespace LB5_2
 {
-    partial class Program
+    internal class Program
     {
-        static List<Student> ReadData(string fileName)
+        public static List<Student> ReadData(string fileName)
         {
             StreamReader sr = new StreamReader(fileName);
             string studentInfo;
@@ -32,16 +30,42 @@ namespace LB5_2
 
             return students;
         }
-
-        static void runMenu(List<Student> studs)
+        static void RunMenu(List<Student> studs)
         {
-            Console.WriteLine(studs[0].firstName);
-        }
+            int choice;
 
-        static void Main(string[] args)
+            do
+            {
+                Console.WriteLine("Select:\nEnter 1 to select student Rostik:");
+                Console.WriteLine("Enter 2 to select student Gleb:");
+                Console.WriteLine("Enter 0 to exit the program!");
+
+                choice = Convert.ToInt32(Console.ReadLine());
+
+                switch (choice)
+                {
+                    case 0:
+                        break;
+                    case 1:
+                        Rostik rostik = new Rostik();
+                        rostik.MyTask();
+                        break;
+                    case 2:
+                        //Gleb gleb = new Gleb();
+                        //gleb.TaskGleb();
+                        break;
+                    default:
+                        Console.ForegroundColor = ConsoleColor.Red;
+                        Console.WriteLine("Команда не розпiзнана!");
+                        Console.ResetColor();
+                        break;
+                }
+            } while (choice != 0);
+        }
+        static void Main()
         {
             List<Student> studs = ReadData("input.txt");
-            runMenu(studs);
+            RunMenu(studs);
         }
     }
 }

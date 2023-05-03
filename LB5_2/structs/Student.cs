@@ -3,7 +3,7 @@ using System.Text.RegularExpressions;
 
 namespace LB5_2
 {
-    struct Student
+    public struct Student
     {
         public string surName;
         public string firstName;

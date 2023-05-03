@@ -7,29 +7,6 @@ namespace LB5_2
 {
     internal class Program
     {
-        public static List<Student> ReadData(string fileName)
-        {
-            StreamReader sr = new StreamReader(fileName);
-            string studentInfo;
-            List<Student> students = new List<Student>();
-            
-            try
-            {
-                while (!sr.EndOfStream)
-                {
-                    studentInfo = sr.ReadLine();
-                    Student student = new Student(studentInfo);
-                    students.Add(student);
-                }
-            }
-            catch (IOException e)
-            {
-                Console.WriteLine($"Failed to read line {fileName}:\n" + e.Message);
-                throw;
-            }
-
-            return students;
-        }
         static void RunMenu(List<Student> studs)
         {
             int choice;
@@ -48,7 +25,7 @@ namespace LB5_2
                         break;
                     case 1:
                         Rostik rostik = new Rostik();
-                        rostik.MyTask();
+                        rostik.MyTask(studs);
                         break;
                     case 2:
                         Gleb gleb = new Gleb();
@@ -65,7 +42,7 @@ namespace LB5_2
         static void Main()
         {
             List<Student> studs = File.ReadStudentsData("input.txt");
-            runMenu(studs);
+            RunMenu(studs);
         }
     }
 }

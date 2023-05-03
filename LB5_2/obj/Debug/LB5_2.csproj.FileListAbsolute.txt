@@ -5,3 +5,10 @@ D:\univ\ПАЛМ\LB5_2\LB5_2\bin\Debug\LB5_2.exe
 D:\univ\ПАЛМ\LB5_2\LB5_2\bin\Debug\LB5_2.pdb
 D:\univ\ПАЛМ\LB5_2\LB5_2\obj\Debug\LB5_2.exe
 D:\univ\ПАЛМ\LB5_2\LB5_2\obj\Debug\LB5_2.pdb
+D:\Documents\ЧНУ\C#\Лабораторна робота 5(2)\cSharp_lb5_2-files\LB5_2\bin\Debug\LB5_2.exe
+D:\Documents\ЧНУ\C#\Лабораторна робота 5(2)\cSharp_lb5_2-files\LB5_2\bin\Debug\LB5_2.pdb
+D:\Documents\ЧНУ\C#\Лабораторна робота 5(2)\cSharp_lb5_2-files\LB5_2\obj\Debug\LB5_2.csproj.AssemblyReference.cache
+D:\Documents\ЧНУ\C#\Лабораторна робота 5(2)\cSharp_lb5_2-files\LB5_2\obj\Debug\LB5_2.csproj.SuggestedBindingRedirects.cache
+D:\Documents\ЧНУ\C#\Лабораторна робота 5(2)\cSharp_lb5_2-files\LB5_2\obj\Debug\LB5_2.csproj.CoreCompileInputs.cache
+D:\Documents\ЧНУ\C#\Лабораторна робота 5(2)\cSharp_lb5_2-files\LB5_2\obj\Debug\LB5_2.exe
+D:\Documents\ЧНУ\C#\Лабораторна робота 5(2)\cSharp_lb5_2-files\LB5_2\obj\Debug\LB5_2.pdb

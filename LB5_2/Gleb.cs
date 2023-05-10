@@ -5,11 +5,12 @@ namespace LB5_2
 {
     class Gleb
     {
+        private static File f = new File();
         public int improvedScholarship = 6000;
+        public string result = "";
         
         public void Task(List<Student> studs)
         {
-            string result = "";
             for (int i = 0; i < studs.Count; i++)
             {
                 Student student = studs[i];
@@ -27,7 +28,7 @@ namespace LB5_2
             }
 
             Console.WriteLine(result);
-            File.WriteData("input.txt", result);
+            f.WriteData("input.txt", result);
         }
     }
 }

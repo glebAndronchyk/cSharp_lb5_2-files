@@ -7,7 +7,8 @@ namespace LB5_2
 {
     internal class Program
     {
-        static void RunMenu(List<Student> studs)
+        private static File f = new File();
+        public static void RunMenu(List<Student> studs)
         {
             int choice;
 
@@ -39,9 +40,9 @@ namespace LB5_2
                 }
             } while (choice != 0);
         }
-        static void Main()
+        public static void Main()
         {
-            List<Student> studs = File.ReadStudentsData("input.txt");
+            List<Student> studs = f.ReadStudentsData("input.txt");
             RunMenu(studs);
         }
     }

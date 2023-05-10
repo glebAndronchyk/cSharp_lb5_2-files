@@ -4,9 +4,15 @@ using System.IO;
 
 namespace LB5_2
 {
-    class File
+    public interface IFile
     {
-        public static List<Student> ReadStudentsData(string fileName)
+        List<Student> ReadStudentsData(string filename);
+        void WriteData(string fileName, string data);
+    }
+    
+    class File: IFile
+    {
+        public List<Student> ReadStudentsData(string fileName)
         {
             StreamReader sr = new StreamReader(fileName);
             string studentInfo;
@@ -34,7 +40,7 @@ namespace LB5_2
             return students;
         }
         
-        public static void WriteData(string fileName, string data)
+        public void WriteData(string fileName, string data)
         {
             StreamWriter sw = new StreamWriter(fileName, false);
 
